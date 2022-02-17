@@ -1,0 +1,11 @@
+{
+  "name": "toturial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch scss/_style.scss:styles/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

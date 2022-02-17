@@ -1,0 +1,43 @@
+@import "reset";
+@import "colors";
+@import "variables";
+@import "libary";
+@import "general";
+
+h1 {
+    @include font-title(1);
+}
+
+h2 {
+    @include font-title(2);
+}
+
+h3 {
+    @include font-title(3);
+}
+
+ol {
+    list-style: decimal;
+}
+
+ol,
+ul {
+    list-style-position: inside;
+}
+
+a {
+    &[href] {
+        @include font-size("xs", "bold");
+        color: $dark-gray-blue;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: $midnight;
+        transition: 0.5s;
+    }
+}
+
+main {
+    padding: 0.5rem;
+}

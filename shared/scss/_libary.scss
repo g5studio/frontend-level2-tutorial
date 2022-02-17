@@ -1,0 +1,33 @@
+@mixin font-title($title-level: 1) {
+    $size: getTitleFontSize($title-level);
+    line-height: getLineHteight($size);
+    font-size: $size;
+}
+
+@mixin font-size($level, $weight: normal) {
+    $size: map-get($font-level, $level);
+    font-size: $size;
+    font-weight: $weight;
+    line-height: getLineHteight($size);
+}
+
+@function getTitleFontSize($title-level) {
+    @if $title-level == 1 {
+        $level: "xl";
+        @return map-get($font-level, $level);
+    } @else if $title-level == 2 {
+        $level: "lgx";
+        @return map-get($font-level, $level);
+    } @else {
+        $level: "md";
+        @return map-get($font-level, $level);
+    }
+}
+
+@function getLineHteight($font-size) {
+    @if $font-size * 1.125 > 1.25rem {
+        @return 1.25rem;
+    } @else {
+        @return $font-size * 1.125;
+    }
+}

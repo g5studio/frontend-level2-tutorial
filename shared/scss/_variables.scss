@@ -1,0 +1,66 @@
+$font-level: (
+    xxs: 0.625rem,
+    xs: 0.75rem,
+    sm: 0.875rem,
+    md: 1rem,
+    lg: 1.125rem,
+    lgx: 1.25rem,
+    xl: 1.5rem,
+    xxl: 1.875rem,
+);
+
+$theme-colors: (
+    primary: $aqua-green,
+    danger: $carmine,
+    warning: $azure,
+    info: $water-grass,
+    border: $link-water,
+    hint: $gray,
+);
+
+$space: (
+    0_25: 0.25rem,
+    0_5: 0.5rem,
+    0_75: 0.75rem,
+    1: 1rem,
+    1_25: 1.25rem,
+    1_5: 1.5rem,
+    2: 2rem,
+    3: 3rem,
+);
+
+$layout-level: (
+    md: 768px,
+    xl: 1280px,
+    xxl: 1920px,
+);
+
+$display-types: (
+    block: block,
+    flex: flex,
+    inline-block: inline-block,
+    inline-flex: inline-flex,
+);
+
+$flex-types: (
+    col: column,
+    row: row,
+    col-reverse: column-reverse,
+    row-reverse: row-reverse,
+);
+
+$align-items-types: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+);
+
+$justify-content-types: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+);
