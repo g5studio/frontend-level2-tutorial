@@ -1,0 +1,13 @@
+@each $key, $value in $theme-colors {
+    .text {
+        &-#{$key} {
+            color: $value !important;
+        }
+    }
+
+    .border {
+        &-#{$key} {
+            border: 1px solid $value !important;
+        }
+    }
+}

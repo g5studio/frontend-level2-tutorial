@@ -1,0 +1,58 @@
+@each $level, $value in $layout-level {
+    @media screen and (min-width: $value) {
+        @each $key, $value in $font-level {
+            .text-#{$level} {
+                &-#{$key} {
+                    font-size: $value !important;
+                }
+            }
+        }
+
+        @each $key, $value in $space {
+            .mt-#{$level} {
+                &-#{$key} {
+                    margin-top: $value !important;
+                }
+            }
+            .mr-#{$level} {
+                &-#{$key} {
+                    margin-right: $value !important;
+                }
+            }
+            .mb-#{$level} {
+                &-#{$key} {
+                    margin-bottom: $value !important;
+                }
+            }
+            .ml-#{$level} {
+                &-#{$key} {
+                    margin-left: $value !important;
+                }
+            }
+        }
+
+        @each $key, $value in $display-types {
+            .d-#{$level}-#{$key} {
+                display: $value !important;
+            }
+        }
+
+        @each $key, $value in $flex-types {
+            .flex-#{$level}-#{$key} {
+                flex-direction: $value !important;
+            }
+        }
+
+        @each $key, $value in $align-items-types {
+            .align-items-#{$level}-#{$key} {
+                align-items: $value !important;
+            }
+        }
+
+        @each $key, $value in $justify-content-types {
+            .justify-content-#{$level}-#{$key} {
+                justify-content: $value !important;
+            }
+        }
+    }
+}

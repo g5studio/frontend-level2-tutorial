@@ -3,6 +3,11 @@
 @import "variables";
 @import "libary";
 @import "general";
+@import "text";
+@import "themes";
+@import "button";
+@import "spacing";
+@import "rwd";
 
 h1 {
     @include font-title(1);

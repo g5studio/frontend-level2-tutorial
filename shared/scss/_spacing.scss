@@ -1,0 +1,22 @@
+@each $key, $value in $space {
+    .mt {
+        &-#{$key} {
+            margin-top: $value !important;
+        }
+    }
+    .mr {
+        &-#{$key} {
+            margin-right: $value !important;
+        }
+    }
+    .mb {
+        &-#{$key} {
+            margin-bottom: $value !important;
+        }
+    }
+    .ml {
+        &-#{$key} {
+            margin-left: $value !important;
+        }
+    }
+}
