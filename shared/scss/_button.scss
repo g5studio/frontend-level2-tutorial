@@ -5,6 +5,7 @@
     border-radius: 3px;
     border: 1px solid $link-water;
     background-color: inherit;
+    white-space: nowrap;
     @include font-size("sm");
     &:focus,
     &:hover {
@@ -14,18 +15,6 @@
     @each $key, $value in $btn-size {
         &-#{$key} {
             height: $value;
-        }
-    }
-
-    @each $key, $value in $theme-colors {
-        &-#{$key} {
-            border-color: $value;
-            color: $value;
-            &:focus,
-            &:hover {
-                border-color: darken($value, 10%);
-                color: darken($value, 10%);
-            }
         }
     }
 }

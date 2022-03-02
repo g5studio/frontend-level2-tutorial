@@ -6,22 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../shared/styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../shared/images/favicon.ico">
-    <title>Week1 - Variable</title>
+    <title>變數宣告與使用</title>
 </head>
 
 <body>
-    <main>
+    <header>
         <nav class="d-flex flex-row align-items-center">
-            <a href="hello-world/index.html">Hello World</a>
-            <a class="ml-1" href="scope/index.html">Scope</a>
+            <a href="../index.html">返回</a>
         </nav>
-        <button class="btn btn-sm btn-warning mt-1" id="practice-variable">
-            變數
-        </button>
+    </header>
+    <main>
+        <section class="mt-0_5">
+            <h2 class="text-primary">範例</h2>
+            <ul class="d-flex flex-row flex-wrap">
+                <li>
+                    <button class="btn btn-sm btn-warning" id="example-variable">變數宣告</button>
+                </li>
+                <li>
+                    <button class="btn btn-sm btn-warning" id="example-console">打印結果</button>
+                </li>
+                <li>
+                    <button class="btn btn-sm btn-warning" id="example-scope">生命週期</button>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="text-primary">練習</h2>
+            <ul class="d-flex flex-row flex-wrap">
+                <li>
+                    <button class="btn btn-sm btn-warning" id="practice-variable">顯示姓名</button>
+                </li>
+                <li>
+                    <button class="btn btn-sm btn-warning" id="practice-console">Hello World</button>
+                </li>
+            </ul>
+        </section>
+        <article id="article" class="border text-sm p-0_5"></article>
     </main>
-    <!-- <script src="scripts/main.js"></script> -->
-    <script src="scripts/scope.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

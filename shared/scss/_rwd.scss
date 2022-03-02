@@ -9,6 +9,11 @@
         }
 
         @each $key, $value in $space {
+            .m-#{$level} {
+                &-#{$key} {
+                    margin: $value !important;
+                }
+            }
             .mt-#{$level} {
                 &-#{$key} {
                     margin-top: $value !important;
@@ -27,6 +32,31 @@
             .ml-#{$level} {
                 &-#{$key} {
                     margin-left: $value !important;
+                }
+            }
+            .p-#{$level} {
+                &-#{$key} {
+                    padding: $value !important;
+                }
+            }
+            .pt-#{$level} {
+                &-#{$key} {
+                    padding-top: $value !important;
+                }
+            }
+            .pr-#{$level} {
+                &-#{$key} {
+                    padding-right: $value !important;
+                }
+            }
+            .pb-#{$level} {
+                &-#{$key} {
+                    padding-bottom: $value !important;
+                }
+            }
+            .pl-#{$level} {
+                &-#{$key} {
+                    padding-left: $value !important;
                 }
             }
         }

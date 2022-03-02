@@ -6,8 +6,24 @@
     }
 
     .border {
+        @if $key == border {
+            border: 1px solid map-get($theme-colors, border);
+        } @else {
+            &-#{$key} {
+                border: 1px solid $value !important;
+            }
+        }
+    }
+
+    .btn {
         &-#{$key} {
-            border: 1px solid $value !important;
+            border-color: $value;
+            color: $value;
+            &:focus,
+            &:hover {
+                border-color: darken($value, 10%);
+                color: darken($value, 10%);
+            }
         }
     }
 }

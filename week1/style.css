@@ -1,0 +1,16 @@
+ul > li {
+    margin-top: 0.5rem;
+}
+
+ul > li:not(:last-of-type) {
+    margin-right: 0.25rem;
+}
+
+section:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+article {
+    display: none;
+    margin-top: 3rem;
+}
