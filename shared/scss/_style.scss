@@ -53,6 +53,18 @@ header {
     & + main {
         height: calc(100vh - 2rem);
     }
+
+    & > nav {
+        & > a {
+            &:not(:last-of-type) {
+                padding-right: 0.5rem;
+                border-right: 1px solid $link-water;
+            }
+            &:not(:first-of-type) {
+                padding-left: 0.5rem;
+            }
+        }
+    }
 }
 
 main {

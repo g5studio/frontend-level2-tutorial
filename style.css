@@ -1,5 +1,8 @@
 ul > li {
     margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 section {
@@ -10,8 +13,6 @@ section {
     height: 200px;
     width: 200px;
     border-radius: 100%;
-    margin: 0 auto;
-    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -25,24 +26,24 @@ ul > li > section:hover {
         0 24px 24px 0 rgba(99, 115, 129, 0.04);
 }
 
-ul > li > section:hover h1 {
+ul > li section:hover h1 {
     color: white !important;
     transition: 0.5s;
 }
 
-ul > li > section:hover p {
+ul > li section:hover p {
     color: white !important;
     transition: 0.5s;
 }
 
-ul > li:first-of-type > section:hover {
+ul > li:first-of-type section:hover {
     background-color: #f7992b;
 }
 
-ul > li:nth-child(2) > section:hover {
+ul > li:nth-child(2) section:hover {
     background-color: #00a3b4;
 }
 
-ul > li:nth-child(3) > section:hover {
+ul > li:nth-child(3) section:hover {
     background-color: #087ded;
 }
