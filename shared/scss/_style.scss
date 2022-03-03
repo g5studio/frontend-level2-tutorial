@@ -47,6 +47,8 @@ header {
     height: 2rem;
     padding: 0 0.5rem;
     box-shadow: 0px 3px 5px 0px rgb(236 238 241 / 60%);
+    background-color: $background-color;
+    font-weight: bold;
     @include flex-box;
     & + main {
         height: calc(100vh - 2rem);

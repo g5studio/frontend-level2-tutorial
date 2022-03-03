@@ -1,7 +1,19 @@
-@each $key, $value in $font-level {
-    .text {
+.text {
+    @each $key, $value in $font-level {
         &-#{$key} {
             font-size: $value !important;
+        }
+    }
+
+    @each $key, $value in $text-align-types {
+        &-#{$key} {
+            text-align: $value !important;
+        }
+    }
+
+    @each $key, $value in $font-weight-types {
+        &-#{$key} {
+            font-weight: $value !important;
         }
     }
 }

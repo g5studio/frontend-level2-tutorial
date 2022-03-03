@@ -6,21 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shared/styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="shared/images/favicon.ico">
     <title>前端中階課程</title>
 </head>
 
 <body>
-    <main>
+    <header>
         <nav class="d-flex flex-row align-items-center">
             <a href="week1/index.html">變數與生命週期</a>
         </nav>
-        <h2 class="mt-1">中階課程包含以下內容</h2>
-        <ol>
-            <li class="text-md mt-0_5">網站的靈魂 - javascript</li>
-            <li class="text-md mt-0_5">更簡潔快速的js - ES6+</li>
-            <li class="text-md mt-0_5">元祖級js框架 - JQuery</li>
-        </ol>
+    </header>
+    <main>
+        <h2 class="mt-1 text-secondary text-center">中階課程包含以下內容</h2>
+        <ul class="row align-items-stretch">
+            <li class="col-md-4 col-12">
+                <section class="text-md border-primary p-1">
+                    <h1 class="text-center text-bold">Javascript</h1>
+                    <p class="mt-1 text-xs text-hint text-center">最適合新手上手的程式語言</p>
+                </section>
+            </li>
+            <li class="col-md-4 col-12">
+                <section class="text-md border-secondary p-1">
+                    <h1 class="text-center text-bold">ES6+</h1>
+                    <p class="mt-1 text-xs text-hint text-center">更易讀、更快速的JS寫法</p>
+                </section>
+            </li>
+            <li class="col-md-4 col-12">
+                <section class="text-md border-warning p-1">
+                    <h1 class="text-center text-bold">JQuery</h1>
+                    <p class="mt-1 text-xs text-hint text-center">曾經風靡一時的JS框架</p>
+                </section>
+            </li>
+        </ul>
     </main>
 </body>
 

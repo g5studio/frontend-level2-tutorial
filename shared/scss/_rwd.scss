@@ -1,5 +1,5 @@
-@each $level, $value in $layout-level {
-    @media screen and (min-width: $value) {
+@each $level, $width in $layout-level {
+    @media screen and (min-width: $width) {
         @each $key, $value in $font-level {
             .text-#{$level} {
                 &-#{$key} {
@@ -82,6 +82,15 @@
         @each $key, $value in $justify-content-types {
             .justify-content-#{$level}-#{$key} {
                 justify-content: $value !important;
+            }
+        }
+
+        @for $ratio from 1 to 13 {
+            .col-#{$level}-#{$ratio} {
+                box-sizing: border-box;
+                padding: 0 0.5rem;
+                flex-basis: calc($ratio / 12 * 100%);
+                flex-grow: 1;
             }
         }
     }

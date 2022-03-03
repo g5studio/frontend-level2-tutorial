@@ -4,6 +4,13 @@
     }
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -0.5rem;
+    flex-wrap: wrap;
+}
+
 @each $key, $value in $display-types {
     .d-#{$key} {
         display: $value !important;
@@ -25,5 +32,20 @@
 @each $key, $value in $justify-content-types {
     .justify-content-#{$key} {
         justify-content: $value !important;
+    }
+}
+
+.col {
+    flex: 1;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+@for $ratio from 1 to 13 {
+    .col-#{$ratio} {
+        box-sizing: border-box;
+        padding: 0 0.5rem;
+        flex-basis: calc($ratio / 12 * 100%);
+        flex-grow: 1;
     }
 }

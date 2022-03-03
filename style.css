@@ -1,0 +1,48 @@
+ul > li {
+    margin-top: 3rem;
+}
+
+section {
+    /* box-sizing: border-box; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+ul > li h1 {
+    color: #637381;
+}
+
+ul > li > section:hover {
+    border-color: #c4cdd5 !important;
+    box-shadow: 0 2px 5px 0 rgba(99, 115, 129, 0.2), 0 6px 14px 0 rgba(99, 115, 129, 0.1),
+        0 24px 24px 0 rgba(99, 115, 129, 0.04);
+}
+
+ul > li > section:hover h1 {
+    color: white !important;
+    transition: 0.5s;
+}
+
+ul > li > section:hover p {
+    color: white !important;
+    transition: 0.5s;
+}
+
+ul > li:first-of-type > section:hover {
+    background-color: #f7992b;
+}
+
+ul > li:nth-child(2) > section:hover {
+    background-color: #00a3b4;
+}
+
+ul > li:nth-child(3) > section:hover {
+    background-color: #087ded;
+}
