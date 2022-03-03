@@ -10,14 +10,14 @@ function resolveAction(id) {
             showHint(`
             <p>以下範例將示範如何宣告一個名為identityNo的變數，並放入一組身分證號碼。</P>
             <p class = "text-warning mt-1">var identityNo = 'A123456789';</p>
-            <p class = "text-xs text-hint mt-0_5">點擊開發者工具中的console標籤，並輸入變數名稱查看資料。</P>
+            <p class = "text-xs text-hint mt-1">點擊開發者工具中的console標籤，並輸入變數名稱查看資料。</P>
             `);
             break;
         case 'example-console':
             showHint(`
             <p>以下範例將示範如何檢視程式運行結果。</P>
             <p class = "text-warning mt-1">console.log('test');</p>
-            <p class = "text-xs text-hint mt-0_5">點擊開發者工具中的console標籤，輸入方程式碼查看結果。</P>
+            <p class = "text-xs text-hint mt-1">點擊開發者工具中的console標籤，輸入方程式碼查看結果。</P>
             `);
             break;
         case 'example-scope':
@@ -29,7 +29,7 @@ function resolveAction(id) {
                     &nbsp&nbsp console.log(animal); <br>
                 }
             </p>
-            <p class = "text-xs text-hint mt-0_5">點擊開發者工具中的console標籤，並呼叫animal變數。</P>
+            <p class = "text-xs text-hint mt-1">點擊開發者工具中的console標籤，並呼叫animal變數。</P>
             `);
             scopeExample();
             break;

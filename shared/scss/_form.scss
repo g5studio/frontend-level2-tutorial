@@ -1,0 +1,32 @@
+.form-control {
+    height: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid getThemeColor("border");
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    &:disabled,
+    &[readonly] {
+        -webkit-text-fill-color: $gray-blue;
+        border-color: $light-gray;
+        color: $gray-blue;
+        cursor: not-allowed;
+    }
+
+    &:focus {
+        border-color: getThemeColor("warning");
+    }
+
+    &::placeholder {
+        color: getThemeColor("border");
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+}

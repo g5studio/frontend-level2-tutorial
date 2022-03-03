@@ -129,6 +129,11 @@ table {
   border-spacing: 0;
 }
 
+input:focus,
+button:focus {
+  outline: none;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -372,6 +377,33 @@ table {
 }
 .btn-lg {
   height: 3rem;
+}
+
+.form-control {
+  height: 2.5rem;
+  box-sizing: border-box;
+  border: 1px solid #c4cdd5;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+.form-control:disabled, .form-control[readonly] {
+  -webkit-text-fill-color: #919eab;
+  border-color: #dfe3e8;
+  color: #919eab;
+  cursor: not-allowed;
+}
+.form-control:focus {
+  border-color: #087ded;
+}
+.form-control::placeholder {
+  color: #c4cdd5;
+}
+.form-control::-webkit-outer-spin-button, .form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-control[type=number] {
+  -moz-appearance: textfield;
 }
 
 .m-0_25 {
@@ -811,6 +843,23 @@ table {
 .btn-hint:focus, .btn-hint:hover {
   border-color: #585b60;
   color: #585b60;
+}
+
+.text-article {
+  color: #637381 !important;
+}
+
+.border-article {
+  border: 1px solid #637381 !important;
+}
+
+.btn-article {
+  border-color: #637381;
+  color: #637381;
+}
+.btn-article:focus, .btn-article:hover {
+  border-color: #4d5964;
+  color: #4d5964;
 }
 
 @media screen and (min-width: 768px) {
@@ -2365,6 +2414,12 @@ h2 {
 h3 {
   line-height: 1.125rem;
   font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.125rem;
 }
 
 ol {

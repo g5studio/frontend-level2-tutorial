@@ -5,6 +5,7 @@
 @import "general";
 @import "text";
 @import "button";
+@import "form";
 @import "spacing";
 @import "themes";
 @import "rwd";
@@ -19,6 +20,10 @@ h2 {
 
 h3 {
     @include font-title(3);
+}
+
+p {
+    @include font-size("md");
 }
 
 ol {

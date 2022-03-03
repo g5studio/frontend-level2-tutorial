@@ -20,33 +20,54 @@
             </a>
         </nav>
         <nav class="d-flex flex-row align-items-center">
-            <a href="../index.html">返回</a>
-            <a href="../">下一章</a>
+            <a href="../week1/index.html">變數宣告與使用</a>
+            <a href="../index.html">首頁</a>
+            <a href="../">陣列</a>
         </nav>
     </header>
     <main>
         <section class="mt-0_5">
             <h2 class="text-secondary">範例</h2>
-            <ul class="d-flex flex-row flex-wrap">
+            <ul>
                 <li>
-                    <button class="btn btn-sm btn-warning" id="example-variable">變數宣告</button>
+                    <h3 class="text-article text-sm">函式呼叫</h3>
+                    <ul class="d-flex flex-row flex-wrap">
+                        <li>
+                            <button class="btn btn-warning" id="example-function">普通函式</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-warning" id="example-function-IIFE">立即執行函式</button>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <button class="btn btn-sm btn-warning" id="example-console">打印結果</button>
-                </li>
-                <li>
-                    <button class="btn btn-sm btn-warning" id="example-scope">生命週期</button>
+                    <h3 class="text-article text-sm">透過JS從DOM物件中取得HTML Element</h3>
+                    <input id="example-element-input" class="form-control mt-0_5" type="text" placeholder="請輸入內容">
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-catch-element">
+                        取得HTML Element
+                    </button>
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-get-element-value">
+                        取得輸入內容
+                    </button>
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-set-element-value">
+                        修改輸入內容
+                    </button>
                 </li>
             </ul>
         </section>
         <section>
             <h2 class="text-secondary">練習</h2>
-            <ul class="d-flex flex-row flex-wrap">
+            <ul>
                 <li>
-                    <button class="btn btn-sm btn-warning" id="practice-variable">顯示姓名</button>
-                </li>
-                <li>
-                    <button class="btn btn-sm btn-warning" id="practice-console">Hello World</button>
+                    <h3 class="text-article text-sm">修改使用者名稱</h3>
+                    <input id="practice-user-name-input" class="form-control" placeholder="請輸入使用者名稱" type="text">
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-user-name">
+                        修改使用者名稱
+                    </button>
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-reset-user-name">
+                        清除使用者名稱
+                    </button>
+                    <p class="mt-0_25 text-hint text-xs">使用者名稱：<span id="practice-user-name-content">無</span></p>
                 </li>
             </ul>
         </section>

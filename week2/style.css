@@ -2,7 +2,7 @@ ul > li {
     margin-top: 0.5rem;
 }
 
-ul > li:not(:last-of-type) {
+ul[class*="flex-row"] > li:not(:last-of-type) {
     margin-right: 0.25rem;
 }
 

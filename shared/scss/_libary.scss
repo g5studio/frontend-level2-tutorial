@@ -52,3 +52,10 @@
     }
 }
 
+@function getThemeColor($theme: $midnight) {
+    @if $theme != $midnight {
+        @return map-get($theme-colors, $theme);
+    } @else {
+        @return $midnight;
+    }
+}
