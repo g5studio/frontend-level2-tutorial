@@ -2,8 +2,13 @@
     user-select: none;
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
 ul > li {
-    margin-top: 3rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,4 +55,23 @@ ul > li:nth-child(2) section:hover {
 
 ul > li:nth-child(3) section:hover {
     background-color: #087ded;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 0 1.5rem !important;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #f7992b;
+    color: white !important;
+    border-color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    ul > li {
+        margin-top: 3rem;
+    }
 }
