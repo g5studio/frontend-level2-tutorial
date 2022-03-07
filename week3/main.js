@@ -41,6 +41,12 @@ function resolveAction(id) {
             </P>
             `);
             break;
+        case 'practice-if':
+            validateAge(
+                +document.getElementById('practice-if-input-year').value,
+                +document.getElementById('practice-if-input-age').value
+            );
+            break;
         case 'practice-for':
             findOdds(document.getElementById('practice-for-input').value);
             break;
@@ -86,6 +92,17 @@ function whileExample() {
 function forExample() {
     for (let i of [1, 2, 3, 4]) {
         //...do something
+    }
+}
+
+/**
+ * @description 練習題 - 檢查年齡
+ */
+function validateAge(year, age) {
+    if (2022 - year !== age) {
+        console.log('拒絕');
+    } else {
+        console.log('通過');
     }
 }
 
