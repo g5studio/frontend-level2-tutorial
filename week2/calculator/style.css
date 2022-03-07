@@ -13,6 +13,7 @@
 
 .calculator__cell {
     height: 4rem;
+    padding: 0 !important;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,4 +23,19 @@
 
 .calculator__cell:hover {
     border: 1px solid #c4cdd5;
+}
+
+.calculator__operator > input:checked + label {
+    color: white;
+    background-color: #087ded;
+}
+
+.calculator__operator > label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }

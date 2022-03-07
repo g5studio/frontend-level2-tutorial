@@ -1,59 +1,46 @@
 document.getElementById('calculator')
-    .addEventListener('click', event => onClick(event));
+    .addEventListener('click', event => event.target.tagName !== 'INPUT' ? onClick(event) : null);
 
 /**
- * @description 計算結果
+ * @description 是否需要重置輸入
  */
-var result;
+var reset = false;
 /**
- * @description 當前輸入值
+ * @description 前次輸入值
  */
-var currentinput;
+var previous = 0;
+/**
+ * @description 運算子
+ */
+var previousOperator;
 
 function onClick(event) {
-    switch (event.target.textContent) {
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
-            input(event.target.textContent);
-            break;
-        case '+': break;
-        case '-': break;
-        case '×': break;
-        case '÷': break;
-        case '=': break;
-    }
+    (+event.target.textContent >= 0 || event.target.textContent === 'C') ? input(event.target.textContent) :
+        calculate(event.target.textContent);
 }
 
 function input(text) {
-    const CurrentInput = document.getElementById('calculator-screen');
-    CurrentInput.value = CurrentInput.value + text;
-    currentinput = CurrentInput.value;
+    const Screen = document.getElementById('calculator-screen');
+    Screen.value = +text >= 0 ?
+        +Screen.value > 0 && !reset ? Screen.value + text :
+            +text : 0;
+    previous = (previousOperator !== '=' && previousOperator !== undefined) ? previous : +Screen.value;
+    reset = false;
 }
 
-function plus(a, b) {
-    return a + b;
-}
-
-function minus(a, b) {
-    return a - b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function dividedBy(a, b) {
-    return a / b;
-}
-
-function calculate() {
-
+/**
+ * @description 當前動作為=時，依照前次動作將計算結果顯示於上方，否則維持原數據
+ */
+function calculate(operator) {
+    const Screen = document.getElementById('calculator-screen');
+    Screen.value = operator === '=' ?
+        previousOperator === '+' ? previous + +Screen.value :
+            previousOperator === '-' ? previous - +Screen.value :
+                previousOperator === '×' ? previous * +Screen.value :
+                    previousOperator === '÷' ? previous / +Screen.value :
+                        null :
+        Screen.value;
+    previousOperator = operator;
+    previous = operator === '=' ? +Screen.value : previous;
+    reset = true;
 }
