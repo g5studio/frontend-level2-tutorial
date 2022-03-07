@@ -1,0 +1,59 @@
+
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    background-color: #00a3b4;
+}
+
+input:checked + label::before {
+    transform: translateY(-50%) translateX(calc(20px));
+}
+
+input:checked + label::after {
+    content: "";
+    color: white;
+    right: auto;
+    left: 3px;
+    line-height: 12px;
+    transform: translateY(-50%);
+}
+
+label {
+    display: block;
+    height: 20px;
+    width: 40px;
+    background-color: #919eab;
+    border-radius: 14.5px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+label::after {
+    content: "";
+    color: white;
+    font-size: 10px;
+    display: block;
+    position: absolute;
+    line-height: 10px;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%) scale(0.8);
+}
+
+label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
