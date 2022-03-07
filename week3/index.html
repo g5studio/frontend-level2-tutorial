@@ -30,28 +30,26 @@
             <h2 class="text-secondary">範例</h2>
             <ul>
                 <li>
-                    <h3 class="text-article text-sm">函式呼叫</h3>
+                    <h3 class="text-article text-sm">判斷式</h3>
                     <ul class="d-flex flex-row flex-wrap">
                         <li>
-                            <button class="btn btn-warning" id="example-function">普通函式</button>
+                            <button class="btn btn-warning" id="example-if">單一條件</button>
                         </li>
                         <li>
-                            <button class="btn btn-warning" id="example-function-IIFE">立即執行函式</button>
+                            <button class="btn btn-warning" id="example-else-if">多個條件</button>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <h3 class="text-article text-sm">透過JS從DOM物件中取得HTML Element</h3>
-                    <input id="example-element-input" class="form-control mt-0_5" type="text" placeholder="請輸入內容">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-catch-element">
-                        取得HTML Element
-                    </button>
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-get-element-value">
-                        取得輸入內容
-                    </button>
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="example-set-element-value">
-                        修改輸入內容
-                    </button>
+                    <h3 class="text-article text-sm">迴圈</h3>
+                    <ul class="d-flex flex-row flex-wrap">
+                        <li>
+                            <button class="btn btn-warning" id="example-while">While Loop</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-warning" id="example-for">For Loop</button>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </section>
@@ -59,15 +57,12 @@
             <h2 class="text-secondary">練習</h2>
             <ul>
                 <li>
-                    <h3 class="text-article text-sm">修改使用者名稱</h3>
-                    <input id="practice-user-name-input" class="form-control" placeholder="請輸入使用者名稱" type="text">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-user-name">
-                        修改使用者名稱
+                    <h3 class="text-article text-sm">找出奇數</h3>
+                    <input value="0" id="practice-for-input" class="form-control mt-0_5" placeholder="請輸入最大值"
+                        type="number">
+                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-for">
+                        印出
                     </button>
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-reset-user-name">
-                        清除使用者名稱
-                    </button>
-                    <p class="mt-0_25 text-hint text-xs">使用者名稱：<span id="practice-user-name-content">無</span></p>
                 </li>
             </ul>
         </section>
