@@ -41,6 +41,38 @@ function resolveAction(id) {
             </P>
             `);
             break;
+        case 'example-while':
+            showHint(`
+            <p>以下範例將示範如何透過while迴圈，重複執行程式。</P>
+            <p class = "text-warning mt-1">
+                function whileExample(maximum) {<br>
+                    &nbsp&nbsp while (maximum > 0) { <br>
+                    &nbsp&nbsp&nbsp&nbsp console.log(maximum);<br>
+                    &nbsp&nbsp&nbsp&nbsp maximum = maximum - 1;<br>
+                    &nbsp&nbsp  } <br>
+                }
+            </p>
+            <p class = "text-xs text-hint mt-1">
+                點擊開發者工具中的console標籤，呼叫whileExample()函數，傳入參數查看結果。
+            </P>
+            `);
+            whileExample();
+            break;
+        case 'example-for':
+            showHint(`
+            <p>以下範例將示範如何透過for迴圈，重複執行程式。</P>
+            <p class = "text-warning mt-1">
+                function forExample(maximum) {<br>
+                    &nbsp&nbsp for (let i = 1; i <= maximum; i = i + 1) { <br>
+                    &nbsp&nbsp&nbsp&nbsp     console.log(i);<br>
+                    &nbsp&nbsp  } <br>
+                }
+            </p>
+            <p class = "text-xs text-hint mt-1">
+                點擊開發者工具中的console標籤，呼叫forExample()函數，傳入參數查看結果。
+            </P>
+            `);
+            break;
         case 'practice-if':
             validateAge(
                 +document.getElementById('practice-if-input-year').value,
@@ -49,6 +81,9 @@ function resolveAction(id) {
             break;
         case 'practice-for':
             findOdds(document.getElementById('practice-for-input').value);
+            break;
+        case 'practice-timer':
+            timer(document.getElementById('practice-timer-input').value);
             break;
     }
 }
@@ -80,18 +115,19 @@ function multipleConditionalStatementExample(color = 'red') {
 /**
  * @description 迴圈範例 - while
  */
-function whileExample() {
-    while (true) {
-        // infinite loop
+function whileExample(maximum) {
+    while (maximum > 0) {
+        console.log(maximum);
+        maximum = maximum - 1;
     }
 }
 
 /**
  * @description 迴圈範例 - for
  */
-function forExample() {
-    for (let i of [1, 2, 3, 4]) {
-        //...do something
+function forExample(maximum) {
+    for (let i = 1; i <= maximum; i = i + 1) {
+        console.log(i);
     }
 }
 
@@ -119,6 +155,17 @@ function findOdds(maximum) {
     }
     if (!isHaveResult) {
         console.log('查無結果');
+    }
+}
+
+/**
+ * @description 練習題 - 計時器
+ */
+function timer(time) {
+    for (let i = 0; i < time; i++) {
+        setTimeout(function () {
+            console.log(i + 1);
+        }, 1000 * i);
     }
 }
 
