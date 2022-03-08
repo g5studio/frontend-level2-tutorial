@@ -1,4 +1,17 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
 
+img[src="light.png"] {
+    width: 10rem;
+    margin-top: 2rem;
+}
 
 input {
     display: none;
@@ -9,7 +22,7 @@ input:checked + label {
 }
 
 input:checked + label::before {
-    transform: translateY(-50%) translateX(calc(20px));
+    transform: translateY(-50%) translateX(calc(28px));
 }
 
 input:checked + label::after {
@@ -24,7 +37,7 @@ input:checked + label::after {
 label {
     display: block;
     height: 20px;
-    width: 40px;
+    width: 48px;
     background-color: #919eab;
     border-radius: 14.5px;
     cursor: pointer;
