@@ -27,17 +27,40 @@
     </header>
     <main>
         <h1 class="text-article text-bold text-center mt-1 mb-1">物件</h1>
+        <h2 id="current-user" class="text-primary text-bold text-center mt-1 mb-1"></h2>
         <section>
             <h2 class="text-secondary">範例</h2>
             <ul>
                 <li>
-                    <h3 class="text-article text-sm">判斷式</h3>
+                    <h3 class="text-article text-sm">物件建立</h3>
                     <ul class="d-flex flex-row flex-wrap">
                         <li>
-                            <button class="btn btn-warning" id="example-if">單一條件</button>
+                            <button class="btn btn-warning" id="example-constructor">物件建構式</button>
                         </li>
                         <li>
-                            <button class="btn btn-warning" id="example-else-if">多個條件</button>
+                            <button class="btn btn-warning" id="example-literal">物件實字</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="text-article text-sm">物件讀取</h3>
+                    <ul class="d-flex flex-row flex-wrap">
+                        <li>
+                            <button class="btn btn-warning" id="example-read-property">直接存取</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-warning" id="example-read-property-dynamic">動態存取</button>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="text-article text-sm">物件修改</h3>
+                    <ul class="d-flex flex-row flex-wrap">
+                        <li>
+                            <button class="btn btn-warning" id="example-modify-property">直接修改</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-warning" id="example-modify-property-dynamic">動態修改</button>
                         </li>
                     </ul>
                 </li>
@@ -46,36 +69,12 @@
         <section>
             <h2 class="text-secondary">練習</h2>
             <ul>
-                <li>
-                    <h3 class="text-article text-sm">檢查年齡</h3>
-                    <input min="1911" max="2022" value="1911" id="practice-if-input-year" class="form-control mt-0_5"
-                        placeholder="請輸入出生年份(西元)" type="number">
-                    <input value="0" id="practice-if-input-age" class="form-control mt-0_5" placeholder="請輸入年紀"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-if">
-                        檢查
-                    </button>
-                </li>
-                <li>
-                    <h3 class="text-article text-sm">找出奇數</h3>
-                    <input value="0" id="practice-for-input" class="form-control mt-0_5" placeholder="請輸入最大值"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-for">
-                        印出
-                    </button>
-                </li>
-                <li>
-                    <h3 class="text-article text-sm">計時器</h3>
-                    <input value="0" min="0" id="practice-timer-input" class="form-control mt-0_5" placeholder="請輸入計時秒數"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-timer">
-                        開始計時
-                    </button>
-                </li>
+
             </ul>
         </section>
         <article id="article" class="border text-sm p-0_5"></article>
     </main>
+    <script src="main.js"></script>
 </body>
 
 </html>
