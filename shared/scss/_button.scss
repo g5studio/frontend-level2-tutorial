@@ -7,9 +7,11 @@
     background-color: inherit;
     white-space: nowrap;
     @include font-size("sm");
-    &:focus,
-    &:hover {
-        color: darken($midnight, 30%);
+    &:not(:disabled) {
+        &:focus,
+        &:hover {
+            color: darken($midnight, 30%);
+        }
     }
 
     &:disabled {

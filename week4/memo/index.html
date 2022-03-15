@@ -25,16 +25,24 @@
             <input class="mt-2 form-control" id="memo-name" type="text" placeholder="請輸入備忘錄名稱">
             <textarea class="mt-1 form-control scroll" id="memo-content" placeholder="請輸入備忘錄內容"
                 oninput="onContentChanged(this)"></textarea>
+            <section class="mt-1">
+                <h3 class="text-article mb-1">代辦事項</h3>
+                <ul id="todolist-preview"></ul>
+                <div class="d-flex flex-row align-items-center">
+                    <input id="add-item" type="text" class="form-control" placeholder="請輸入代辦項目"
+                        oninput="onAddItemChanged()">
+                    <button id="add-todo" disabled type="button"
+                        class="btn btn-sm btn-warning text-lgx todo-btn">+</button>
+                </div>
+            </section>
         </form>
         <section class="d-none container flex-col mt-1" id="memo">
             <h1 id="memo-title" class="text-center"></h1>
             <textarea id="memos" class="mt-1 form-control scroll" placeholder="點擊編輯新增備忘錄" readonly></textarea>
+            <ul id="todolist"></ul>
         </section>
         <nav class="d-md-flex d-block flex-row mt-md-3 mt-2 justify-content-end container">
             <ul class="d-md-flex d-block flex-row align-itmes-center">
-                <li class="mr-md-1 mr-0 mb-md-0 mb-1">
-                    <button id="form-cancel" disabled class="w-100 btn btn-border">取消</button>
-                </li>
                 <li>
                     <button id="form-save" class="w-100 btn btn-warning">儲存</button>
                 </li>

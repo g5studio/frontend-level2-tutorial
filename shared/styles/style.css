@@ -366,7 +366,7 @@ button:focus {
   font-weight: normal;
   line-height: 0.984375rem;
 }
-.btn:focus, .btn:hover {
+.btn:not(:disabled):focus, .btn:not(:disabled):hover {
   color: black;
 }
 .btn:disabled {
@@ -867,7 +867,7 @@ button:focus {
   border-color: #f7992b;
   color: #f7992b;
 }
-.btn-primary:focus, .btn-primary:hover {
+.btn-primary:not(:disabled):focus, .btn-primary:not(:disabled):hover {
   border-color: #e68009;
   color: #e68009;
 }
@@ -884,7 +884,7 @@ button:focus {
   border-color: #00a3b4;
   color: #00a3b4;
 }
-.btn-secondary:focus, .btn-secondary:hover {
+.btn-secondary:not(:disabled):focus, .btn-secondary:not(:disabled):hover {
   border-color: #007581;
   color: #007581;
 }
@@ -901,7 +901,7 @@ button:focus {
   border-color: #d80238;
   color: #d80238;
 }
-.btn-danger:focus, .btn-danger:hover {
+.btn-danger:not(:disabled):focus, .btn-danger:not(:disabled):hover {
   border-color: #a5022b;
   color: #a5022b;
 }
@@ -918,7 +918,7 @@ button:focus {
   border-color: #087ded;
   color: #087ded;
 }
-.btn-warning:focus, .btn-warning:hover {
+.btn-warning:not(:disabled):focus, .btn-warning:not(:disabled):hover {
   border-color: #0663bc;
   color: #0663bc;
 }
@@ -935,7 +935,7 @@ button:focus {
   border-color: #3ea603;
   color: #3ea603;
 }
-.btn-info:focus, .btn-info:hover {
+.btn-info:not(:disabled):focus, .btn-info:not(:disabled):hover {
   border-color: #2b7402;
   color: #2b7402;
 }
@@ -952,7 +952,7 @@ button:focus {
   border-color: #c4cdd5;
   color: #c4cdd5;
 }
-.btn-border:focus, .btn-border:hover {
+.btn-border:not(:disabled):focus, .btn-border:not(:disabled):hover {
   border-color: #a6b4c0;
   color: #a6b4c0;
 }
@@ -969,7 +969,7 @@ button:focus {
   border-color: #70747b;
   color: #70747b;
 }
-.btn-hint:focus, .btn-hint:hover {
+.btn-hint:not(:disabled):focus, .btn-hint:not(:disabled):hover {
   border-color: #585b60;
   color: #585b60;
 }
@@ -986,7 +986,7 @@ button:focus {
   border-color: #637381;
   color: #637381;
 }
-.btn-article:focus, .btn-article:hover {
+.btn-article:not(:disabled):focus, .btn-article:not(:disabled):hover {
   border-color: #4d5964;
   color: #4d5964;
 }

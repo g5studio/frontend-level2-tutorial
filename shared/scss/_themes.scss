@@ -19,10 +19,12 @@
         &-#{$key} {
             border-color: $value;
             color: $value;
-            &:focus,
-            &:hover {
-                border-color: darken($value, 10%);
-                color: darken($value, 10%);
+            &:not(:disabled) {
+                &:focus,
+                &:hover {
+                    border-color: darken($value, 10%);
+                    color: darken($value, 10%);
+                }
             }
         }
     }
