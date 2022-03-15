@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/styles/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../shared/images/favicon.ico">
+    <title>備忘錄</title>
+</head>
+
+<body>
+    <header class="justify-content-between">
+        <nav class="d-flex flex-row align-items-center">
+            <a href="../index.html">
+                返回
+            </a>
+        </nav>
+    </header>
+    <main>
+        <form id="memo-edit" class="d-flex flex-col mt-1 container">
+            <h1 id="memo-edit-title" class="text-article  mt-1 text-center">新增備忘錄</h1>
+            <input class="mt-2 form-control" id="memo-name" type="text" placeholder="請輸入備忘錄名稱">
+            <textarea class="mt-1 form-control scroll" id="memo-content" placeholder="請輸入備忘錄內容"
+                oninput="onContentChanged(this)"></textarea>
+        </form>
+        <section class="d-none container flex-col mt-1" id="memo">
+            <h1 id="memo-title" class="text-center"></h1>
+            <textarea id="memos" class="mt-1 form-control scroll" placeholder="點擊編輯新增備忘錄" readonly></textarea>
+        </section>
+        <nav class="d-md-flex d-block flex-row mt-md-3 mt-2 justify-content-end container">
+            <ul class="d-md-flex d-block flex-row align-itmes-center">
+                <li class="mr-md-1 mr-0 mb-md-0 mb-1">
+                    <button id="form-cancel" disabled class="w-100 btn btn-border">取消</button>
+                </li>
+                <li>
+                    <button id="form-save" class="w-100 btn btn-warning">儲存</button>
+                </li>
+                <li>
+                    <button id="form-edit" class="w-100 btn btn-warning d-none">編輯</button>
+                </li>
+            </ul>
+        </nav>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

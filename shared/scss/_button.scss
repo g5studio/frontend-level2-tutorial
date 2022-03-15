@@ -12,6 +12,13 @@
         color: darken($midnight, 30%);
     }
 
+    &:disabled {
+        background-color: $white;
+        border-color: $link-water;
+        color: $link-water;
+        cursor: not-allowed;
+    }
+
     @each $key, $value in $btn-size {
         &-#{$key} {
             height: $value;

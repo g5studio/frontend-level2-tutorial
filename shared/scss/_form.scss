@@ -4,15 +4,19 @@
     border: 1px solid getThemeColor("border");
     padding: 0.5rem 1rem;
     border-radius: 3px;
+    outline: none;
     &:disabled,
     &[readonly] {
         -webkit-text-fill-color: $gray-blue;
         border-color: $light-gray;
         color: $gray-blue;
+    }
+
+    &:disabled {
         cursor: not-allowed;
     }
 
-    &:focus {
+    &:not([readonly]):focus {
         border-color: getThemeColor("warning");
     }
 

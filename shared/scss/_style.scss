@@ -78,3 +78,7 @@ main {
     height: 100vh;
     @include scroll;
 }
+
+.scroll {
+    @include scroll;
+}
