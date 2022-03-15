@@ -5,8 +5,7 @@ const User = {
     age: 18
 }
 
-window.onload(updateCurrentUserData());
-
+updateCurrentUserData();
 
 function resolveAction(id) {
 
@@ -98,7 +97,25 @@ function resolveAction(id) {
             </P>
             `);
             break;
+        case 'example-delete-property':
+            showHint(`
+            <p>以下範例將示範如何刪除物件的屬性。</P>
+            <p class = "text-warning mt-1">
+                function  deleteUserInfo(key) {<br>
+                &nbsp&nbsp delete User[key];<br>
+                }
+            </p>
+            <p class = "text-xs text-hint mt-1">
+                點擊開發者工具中的console標籤，呼叫deleteUserInfo()，並傳入欄位名稱，查看畫面上方使用者資訊。
+            </P>
+            `);
+            break;
     }
+}
+
+function deleteUserInfo(key) {
+    delete User[key];
+    updateCurrentUserData();
 }
 
 /**
