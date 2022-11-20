@@ -872,6 +872,10 @@ button:focus {
   color: #e68009;
 }
 
+.bg-primary {
+  background-color: #f7992b;
+}
+
 .text-secondary {
   color: #00a3b4 !important;
 }
@@ -887,6 +891,10 @@ button:focus {
 .btn-secondary:not(:disabled):focus, .btn-secondary:not(:disabled):hover {
   border-color: #007581;
   color: #007581;
+}
+
+.bg-secondary {
+  background-color: #00a3b4;
 }
 
 .text-danger {
@@ -906,6 +914,10 @@ button:focus {
   color: #a5022b;
 }
 
+.bg-danger {
+  background-color: #d80238;
+}
+
 .text-warning {
   color: #087ded !important;
 }
@@ -921,6 +933,10 @@ button:focus {
 .btn-warning:not(:disabled):focus, .btn-warning:not(:disabled):hover {
   border-color: #0663bc;
   color: #0663bc;
+}
+
+.bg-warning {
+  background-color: #087ded;
 }
 
 .text-info {
@@ -940,6 +956,10 @@ button:focus {
   color: #2b7402;
 }
 
+.bg-info {
+  background-color: #3ea603;
+}
+
 .text-border {
   color: #c4cdd5 !important;
 }
@@ -955,6 +975,10 @@ button:focus {
 .btn-border:not(:disabled):focus, .btn-border:not(:disabled):hover {
   border-color: #a6b4c0;
   color: #a6b4c0;
+}
+
+.bg-border {
+  background-color: #c4cdd5;
 }
 
 .text-hint {
@@ -974,6 +998,10 @@ button:focus {
   color: #585b60;
 }
 
+.bg-hint {
+  background-color: #70747b;
+}
+
 .text-article {
   color: #637381 !important;
 }
@@ -989,6 +1017,10 @@ button:focus {
 .btn-article:not(:disabled):focus, .btn-article:not(:disabled):hover {
   border-color: #4d5964;
   color: #4d5964;
+}
+
+.bg-article {
+  background-color: #637381;
 }
 
 @media screen and (min-width: 768px) {

@@ -28,4 +28,10 @@
             }
         }
     }
+
+    .bg {
+        &-#{$key} {
+            background-color: $value;
+        }
+    }
 }

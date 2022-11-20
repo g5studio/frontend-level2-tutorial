@@ -5,77 +5,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shared/styles/style.css">
+    <link rel="stylesheet" href="../shared/styles/style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="shared/images/favicon.ico">
-    <title>類別</title>
+    <link rel="shortcut icon" href="../shared/images/favicon.ico">
+    <title>陣列</title>
 </head>
 
 <body>
     <header class="justify-content-between">
         <nav class="d-flex flex-row align-items-center">
             <a target="_blank"
-                href="https://drive.google.com/file/d/1Z1zoq0s9HQDePiEYyVVXnFdzjar5ZBbm/view?usp=sharing">
+                href="https://drive.google.com/file/d/1dD2ALrRyxmYW5mUyyFfEyR-tvoOkoHh2/view?usp=sharing">
                 講義連結
             </a>
         </nav>
         <nav class="d-flex flex-row align-items-center">
             <a href="../week4/index.html">物件</a>
             <a href="../index.html">首頁</a>
-            <!-- <a href="../">物件</a> -->
         </nav>
     </header>
     <main>
-        <h1 class="text-article text-bold text-center mt-1 mb-1">物件</h1>
-        <section>
-            <h2 class="text-secondary">範例</h2>
-            <ul>
+        <h1 class="text-article text-bold text-center mt-1 mb-1">員工名單</h1>
+        <nav class="d-flex flex-row align-items-center justify-content-end ">
+            <button onclick="toggleDialog()" class="btn btn-warning">新增員工</button>
+        </nav>
+        <div class="d-flex flex-row align-items-center pt-2">
+            <section id="department-a" class="border-secondary p-2">
+                <h3 class="text-article text-lg text-center">部門A</h3>
+                <ul class="mt-3"></ul>
+            </section>
+            <ul class="p-2">
                 <li>
-                    <h3 class="text-article text-sm">判斷式</h3>
-                    <ul class="d-flex flex-row flex-wrap">
-                        <li>
-                            <button class="btn btn-warning" id="example-if">單一條件</button>
+                    <button class="btn btn-secondary pl-1 pr-1" onclick="switchDepartment('B')">▶</button>
+                </li>
+                <li class="mt-2">
+                    <button class="btn btn-secondary pl-1 pr-1" onclick="switchDepartment('A')">◀</button>
+                </li>
+            </ul>
+            <section id="department-b" class="border-secondary p-2">
+                <h3 class="text-article text-lg text-center">部門B</h3>
+                <ul class="mt-3"></ul>
+            </section>
+        </div>
+        <div id="dialog" class="dialog-backdrop d-none">
+            <section class="dialog border-secondary p-2">
+                <h1 class="text-article text-bold text-center mt-1 mb-1">新增員工</h1>
+                <form name="employee-edit-form">
+                    <ul>
+                        <li class="d-flex flex-row align-items-center">
+                            <label class="mr-1" for="name">姓名</label>
+                            <input id="name" class="form-control" type="text" oninput="onNameFieldChanged(this.value)">
                         </li>
-                        <li>
-                            <button class="btn btn-warning" id="example-else-if">多個條件</button>
+                        <li class="d-flex flex-row align-items-center mt-2">
+                            <label class="mr-1" for="gender">性別</label>
+                            <select class="form-control" id="gender">
+                                <option value="male">男</option>
+                                <option value="female">女</option>
+                            </select>
+                        </li>
+                        <li class="d-flex flex-row align-items-center mt-2">
+                            <label class="mr-1" for="department">部門</label>
+                            <select class="form-control" id="department">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                            </select>
                         </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2 class="text-secondary">練習</h2>
-            <ul>
-                <li>
-                    <h3 class="text-article text-sm">檢查年齡</h3>
-                    <input min="1911" max="2022" value="1911" id="practice-if-input-year" class="form-control mt-0_5"
-                        placeholder="請輸入出生年份(西元)" type="number">
-                    <input value="0" id="practice-if-input-age" class="form-control mt-0_5" placeholder="請輸入年紀"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-if">
-                        檢查
-                    </button>
-                </li>
-                <li>
-                    <h3 class="text-article text-sm">找出奇數</h3>
-                    <input value="0" id="practice-for-input" class="form-control mt-0_5" placeholder="請輸入最大值"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-for">
-                        印出
-                    </button>
-                </li>
-                <li>
-                    <h3 class="text-article text-sm">計時器</h3>
-                    <input value="0" min="0" id="practice-timer-input" class="form-control mt-0_5" placeholder="請輸入計時秒數"
-                        type="number">
-                    <button class="btn btn-warning d-md-inline-block d-block mt-0_5" id="practice-timer">
-                        開始計時
-                    </button>
-                </li>
-            </ul>
-        </section>
-        <article id="article" class="border text-sm p-0_5"></article>
+                </form>
+                <footer class="d-flex flex-row justify-content-end align-items-center">
+                    <button onclick="toggleDialog(true)" class="btn btn-warning mr-1">取消</button>
+                    <button disabled id="btn-submit" onclick="submit()" class="btn btn-warning">提交</button>
+                </footer>
+            </section>
+        </div>
+
     </main>
+    <script src="./main.js"></script>
 </body>
 
 </html>
